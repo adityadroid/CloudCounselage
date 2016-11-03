@@ -1,0 +1,78 @@
+<com.mxn.soul.flowingdrawer_core.LeftDrawerLayout
+    android:id="@+id/id_drawerlayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    >
+    <!--content-->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_marginTop="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <im.delight.android.webview.AdvancedWebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <com.crystal.crystalpreloaders.widgets.CrystalPreloader
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:crs_pl_style="circular"
+                app:crs_pl_size="very_small"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                app:crs_pl_fg_color="#2980b9"
+                android:id="@+id/webViewProgress"
+                app:crs_pl_bg_color="#fff"/>
+        </RelativeLayout>
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/view_feed_toolbar" />
+        </android.support.design.widget.AppBarLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <!--menu-->
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:clipChildren="false"
+        >
+
+        <com.mxn.soul.flowingdrawer_core.FlowingView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/id_container_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="25dp"
+            android:paddingRight="10dp"
+            />
+
+
+
+    </RelativeLayout>
+
+</com.mxn.soul.flowingdrawer_core.LeftDrawerLayout>
